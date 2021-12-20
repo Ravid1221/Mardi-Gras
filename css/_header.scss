@@ -1,0 +1,82 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position:fixed;
+    width: 100%;
+    box-shadow: 0 0 5px $black; 
+    z-index: 100;
+
+    @include tablet{
+        flex-direction: column;
+    }
+
+    .logo{
+         font-family: $font2;
+         font-size: 2em;
+
+         @include tablet{
+            width: 100%;
+            text-align: center;           
+         }
+         @include mobile{
+             font-size: 1.5em;
+             text-align: left;
+             padding: 5px 0;
+         }
+
+        a{ 
+            color:$black;
+            text-shadow: 0 0 3px $purple;
+        }
+
+      }
+
+    ul{
+        display: flex;
+        list-style: none;
+
+        @include mobile{
+            flex-direction: column;
+            display: none;
+        }
+
+        li{
+            padding: 10px;
+            font-family: $font1;
+
+            @include tablet {
+                padding: 20px;
+                text-align: center;
+            }
+
+            a{
+                  color: $black;
+
+            }
+
+        }
+    }
+
+    .open {
+         display: flex;
+     }
+
+    .hamburger {
+        position: absolute;
+        display: none;
+        @include mobile{
+            display: block;
+            right: 20px;
+            top: 18px;
+            font-size: 1.2em;
+            border: none;
+            background: none;
+        }
+    }
+}
+.gap{
+    height: 68px;
+}

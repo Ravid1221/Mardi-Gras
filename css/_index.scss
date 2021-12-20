@@ -1,0 +1,571 @@
+.overAllIndex {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), $purple), url(/images/coverAll.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 42vh;
+
+    .tickets {
+        text-align: center;
+        color: $white;
+
+        h1 {
+            text-shadow: 0 20px 5px rgba(34, 33, 33, 0.76);
+            font-size: clamp(2rem, 5vw, 7rem);
+            font-family: $font2;
+             @include mobile {
+                padding-top: 1em;
+                padding-bottom: 0.5em;
+             }
+              @include tablet {
+                  padding-top: 1.8em;
+              }
+        }
+        .countdown{
+            width: 25%;
+            margin: auto;
+              @include mobile {
+                  width: 60%;
+              }
+               @include tablet {
+                   width: 50%;
+               }
+        p{
+            font-family: $font1;
+            color: $white;
+            text-align: center;
+            font-size: clamp(1.5rem, 2.2vw, 3rem);
+            margin-bottom: 2%;
+
+        }
+        a{
+            background-color: $white;
+            padding: 1.5%;
+            font-family: $font1;
+            border-radius: 4px;
+            font-size: 1.1em;
+            &:hover{
+                font-size: 1.3em;
+            }
+        }
+    }
+     }      
+ }
+    
+.slider{
+    margin:50px 0;
+    height: 70vh;
+    display: flex;
+    width: 500%;
+    position: relative;
+    animation: move 30s ease-in-out infinite;
+
+    div{
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+       
+    }
+    @include mobile{
+        animation: none;
+    }
+}
+
+
+@keyframes move{
+ 0% {
+     right: 0;
+ }
+
+ 15% {
+     right: 0;
+ }
+
+ 20% {
+     right: 100%;
+ }
+
+ 35% {
+     right: 100%;
+ }
+
+ 40% {
+     right: 200%;
+ }
+
+ 65% {
+     right: 200%;
+ }
+
+ 70% {
+     right: 300%;
+ }
+
+ 85% {
+     right: 300%;
+ }
+
+ 90% {
+     right: 400%;
+ }
+
+ 100% {
+     right: 400%;
+ }
+
+}
+
+//paragraphs
+.paragraphs{
+    width: 100%;
+    background-color: $purple;
+    font-weight: bold;
+    padding: 2.2% 0;
+.innerParagraphs {
+    box-shadow: 0 0 8px $black;
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  background-color: $yellow;
+  border-radius: 80px 0 80px 0;
+  text-align: center;
+  padding-bottom: 10px;
+    @include mobile{
+        flex-direction: column;
+    }
+    @include tablet{
+        max-width: 95%;
+    }
+    .par1{
+        height: 40vh;
+        text-align: center;
+        font-family: $textFont;
+        margin-top: 5%; 
+        img{
+            width: 80%;
+            height: 100%;
+            border-radius: 80px 0 0 0;
+            object-fit: cover;
+        }  
+      }
+    .rightPar1{
+            p {
+                margin: 3% 5%;
+                font-family: $textFont;
+            }
+            a {
+                cursor: pointer;
+                font-family: $font2;
+                font-size: 1em;
+                color: $black;
+                border-bottom: 1px solid $black;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+    
+}
+ .par2 {
+     height: 40vh;
+     text-align: center;
+     font-family: $textFont;
+     margin-top: 7%;
+     img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+     }
+ }
+
+ .rightPar2 {
+     p {
+         margin: 3% 5%;
+         font-family: $textFont;
+         padding-bottom: 8px;
+     }
+
+     a {
+         cursor: pointer;
+         font-family: $font2;
+         font-size: 1em;
+         color: $black;
+         border-bottom: 1px solid $black;
+
+         &:hover {
+             font-weight: bold;
+         }
+     }
+
+ }
+ .par3 {
+     height: 40vh;
+     text-align: center;
+     font-family: $textFont;
+     margin-top: 5%;
+     img {
+         width: 80%;
+         height: 100%;
+         border-radius: 0 0 80px 0;
+         object-fit: cover;
+     }
+ }
+
+ .rightPar3{
+     p {
+         margin: 3% 5%;
+         font-family: $textFont;
+     }
+
+     a {
+         cursor: pointer;
+         font-family: $font2;
+         font-size: 1em;
+         color: $black;
+         border-bottom: 1px solid $black;
+
+         &:hover {
+             font-weight: bold;
+         }
+     }
+
+ }
+}
+}
+
+
+//sponsers
+.sponsers{
+       h1#headLine{
+           text-align: center;
+           font-size: clamp(3rem, 4.5vw, 6rem);
+           font-family: $font2;
+           padding: 1.2em;
+           text-shadow: 0 -30px 2px rgba(12, 12, 12, 0.2);
+       } 
+}
+ .open-popup {
+     display: none;
+     z-index: 1000;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100vh;
+     background-color: rgba(0, 0, 0, 0.7);
+
+     .inner-popup {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         min-height: 50vh;
+         min-width: 30%;
+        background-size: cover;
+        background-position: center;
+         padding: 4%;
+         text-align: center;
+         @include mobile{
+             min-width: 95%;
+         }
+         h1 {
+             margin-bottom: 20px;
+             font-family: $font1;
+         }
+         p{
+             font-family: $textFont;
+             margin-bottom: 10px;
+             font-weight: bold;
+         }
+         a{
+             font-family: $font1;
+             font-size: 1.3em;
+             color:$black;
+         }
+         span{
+             position: absolute;
+             top: 3%;
+             right: 3%;
+             font-size: 2.3em;
+             font-weight: bold;
+             cursor: pointer;
+             @include mobile{
+                 font-size: 1.3em;
+             }
+         }
+     }
+ }
+
+
+section.cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, minmax(200px,300px));
+    gap: 30px;
+    padding: 0 5%;
+
+
+    div.sponser-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+
+    div.box1 {
+        background: linear-gradient(transparent, transparent), url("/images/grid1.jpg");
+        background-size: cover;
+         &:hover {
+             background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                 url("/images/grid1.jpg");
+             background-size: cover;
+         }
+    }
+
+    div.box2 {
+        background:linear-gradient(transparent, transparent), url("/images/grid2.jpg");
+        background-size: cover;
+       &:hover {
+           background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+               url("/images/grid2.jpg");
+           background-size: cover;
+    }
+}
+
+    div.box3 {
+            background:linear-gradient(transparent, transparent),
+            url("/images/grid3.jpg");
+            background-size: cover;
+            background-position: center;
+
+            &:hover {
+                background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                    url("/images/grid3.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+    }
+
+    div.box4 {
+              background:linear-gradient(transparent, transparent),
+              url("/images/grid4.jpg");
+              background-size: cover;
+
+              &:hover {
+                  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                      url("/images/grid4.jpg");
+                  background-size: cover;
+              }
+    }
+
+    div.box5 {
+            background:linear-gradient(transparent, transparent),
+            url("/images/grid5.jpg");
+            background-size: cover;
+
+            &:hover {
+                background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                    url("/images/grid5.jpg");
+                background-size: cover;
+            }
+    }
+
+    div.box6 {
+               background:linear-gradient(transparent, transparent),
+               url("/images/grid6.jpg");
+               background-size: cover;
+               background-position: center;
+
+
+               &:hover {
+                   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                       url("/images/grid6.jpg");
+                   background-size: cover;
+                   background-position: center;
+
+               }
+    }
+
+    div.box7 {
+                background:linear-gradient(transparent, transparent),
+                url("/images/grid7.jpg");
+                background-size: cover;
+                background-position: center;
+
+                &:hover {
+                    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                        url("/images/grid7.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+    }
+
+    div.box8 {
+                background:linear-gradient(transparent, transparent),
+                url("/images/grid8.jpg");
+                background-size: cover;
+
+                &:hover {
+                    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                        url("/images/grid8.jpg");
+                    background-size: cover;
+                }
+    }
+
+    button.box {
+        display: none;
+    }
+
+    div:hover button.box {
+        display: block;
+        padding: 10px;
+        width: 100px;
+        border-radius: 5px;
+        font-size: 1em;
+        background-color: $yellow;
+        margin-top: 120px;
+        color: $black;
+        text-shadow: 0 0 5px $purple;
+        cursor: pointer;
+        font-family: $font1;
+    }
+    @include tablet {
+        grid-template-columns: repeat(2, minmax(200px, 300px));
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(1, minmax(200px, 300px));
+    }
+}
+.photohsSpons{
+    display: none;
+}
+//footer
+#footer{
+    padding: 2% 2%;
+    background-color: $purple;
+    position:relative;
+    margin-top:10%;
+    font-family: $textFont;  
+}
+  .footer-row {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+
+  .footer-left,
+  .footer-right {
+      flex-basis: 45%;
+      padding: 10px;
+      margin-bottom: 20px;
+  }
+
+  .footer-right {
+     padding-left: 25%;
+     @include mobile{
+         padding-left: 0.5%;
+     }
+     @include tablet{
+         padding-left: 0.5%;
+     }
+      .sponsersFootr a{
+          display: block;
+          color: $black;
+          font-family: $textFont;
+          font-size: 1em;
+          position: relative;
+          margin: 5px 0;
+
+          &:hover{
+              font-weight: bold;
+          }
+      }
+  }
+
+  .footer-row h1{
+      margin: 10px 0;
+      font-family: $font1;
+  }
+  .footer-row p{
+      line-height: 35px;
+  }
+  .footer-left .fa,
+  .footer-right .fa,
+  .footer-right .fas{
+      font-size: 1em;
+      color:$white;
+      margin: 10px;
+  }
+    .footer-right a{
+    color:$black;
+    }
+  .footer-img{
+width: 200px;
+height: 200px;
+opacity: 0.7;
+position:absolute;
+left:50%;
+top:35%;
+transform: translate(-50%, -50%);
+@include mobile{
+    display: none;
+}
+@include tablet {
+     display: none;
+}
+  }
+.social-links{
+    text-align: center;
+    p{
+        padding: 1% 0;
+        font-weight: bold;
+    }
+}
+
+.social-links .fa{
+height: 40px;
+width: 40px;
+font-size: 1em;
+line-height: 40px;
+border: 1px solid $white;
+margin: 30px 5px 0;
+color: $white;
+cursor: pointer;
+transition: .5s;
+@include mobile{
+    margin: 0px 5px 0;
+}
+@include tablet{
+    margin: 0px 5px 0;
+}
+  }
+    .social-links .fa:hover{
+        background-color: $white;
+        color:$purple;
+        transform: translateY(-7px);
+    }
+    
+ul.footerList{ 
+    list-style: none;
+    li{
+        margin: 5px 0;
+       a {
+           color: $black;
+           font-family: $textFont;
+           margin: 150px 0;
+           font-size: 1em;
+           position: relative;
+       &:hover {
+           font-weight: bold;
+       }
+       }
+    }
+}
+   
+    

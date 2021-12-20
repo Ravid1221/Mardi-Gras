@@ -1,0 +1,165 @@
+//photos 
+.main{
+      max-width: $maxWidth;
+      margin: auto;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.main .headerFirst{
+    width: 30%;
+    margin: auto;
+       h3 {
+           position: relative;
+           font-size: 3em;
+           font-weight: bolder;
+           height: auto;
+           text-align: center;
+           width: 100%;
+           border-bottom: 3px solid $black;
+           margin: 10% 0 2% 0;
+           span {
+               font-weight: 100;
+           }
+       }
+}
+
+.main .gallery{
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap:1em;
+    grid-auto-flow:dense;
+   
+}
+.main .gallery .img{
+position: relative;
+height: 100%;
+width: 100%;
+overflow: hidden;
+box-shadow: 0 0px 2px rgba(0,0,0,0.9);
+border-radius: 2px;
+}
+.main .gallery .img:first-child{
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(2n+3) {
+    grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(4n+5) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+.main .gallery .img.img:nth-child(6n+7) {
+    grid-column-start: span 1;
+
+}
+.main .gallery .img.img:nth-child(8n+9) {
+       grid-column-start: span 1;
+       grid-row-start: span 1;
+}
+.main .gallery .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) grayscale(0);
+    transition: 0.3s ease-in-out;
+}
+.main .gallery .img:hover img{
+        filter: brightness(1) grayscale(0);
+}
+.popupCover {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    .popUpPhotos {
+        height: 80%;
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 8px $white;
+        @include mobile{
+            width: 90%;
+            height: 50%;
+        }
+         @include tablet {
+             width: 90%;
+             height: 50%;
+         }
+        .closePopup{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            padding: 1%;
+            font-weight: bold;
+            font-size: 1.3em;
+            background-color: $white;
+            cursor: pointer;
+            box-shadow: 0 0 3px $white;
+            @include mobile{
+                top: -8%;
+                left: 90%;
+                width: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+//video
+
+.video{
+      margin: auto;
+       h3 {
+           position: relative;
+           font-size: 3em;
+           font-weight: bolder;
+           height: auto;
+           text-align: center;
+           width: 100%;
+           border-bottom: 3px solid $black;
+           margin: 20% 0 2% 0;
+           width: 30%;
+           margin: auto;
+           span {
+               font-weight: 100;
+           }
+       }
+.headerSecond {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-content: center;
+    padding: 10%;
+    gap: 3em;
+    @include tablet{
+         grid-template-columns: auto;
+    }
+      @include mobile {
+          grid-template-columns: auto;
+      }
+    
+    iframe{
+        margin: auto;
+        width: 400px;
+        height: 250px;
+         @include mobile {
+            width: 300px;
+         }
+    }
+}
+}
+

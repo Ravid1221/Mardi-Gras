@@ -1,0 +1,42 @@
+//Variables
+$black: #0d0d0d;
+$white: #f2f2f2;
+$yellow: #f2cc0f;
+$green: #8cbf3f;
+$purple: #9453a6;
+$maxWidth: 1400px;
+
+$font1: 'pattaya';
+$font2: 'Henny Penny';
+$textFont: 'Roboto',
+sans-serif;
+
+
+//Import
+@import "media";
+@import "header";
+@import "index";
+@import "about";
+@import "photos";
+@import "faq";
+@import "contact";
+@import "trivia";
+@import "highscores";
+@import "game";
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $white;
+    overflow-x:  hidden;
+}
