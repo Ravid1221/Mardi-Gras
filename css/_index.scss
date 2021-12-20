@@ -1,5 +1,5 @@
 .overAllIndex {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), $purple), url(/images/coverAll.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), $purple), url("../images/coverAll.jpg");
     background-size: cover;
     background-position: center;
     height: 42vh;
@@ -68,9 +68,16 @@
         }
        
     }
-    @include mobile{
+    @include tablet{
         animation: none;
+        .slider2,
+        .slider3,
+        .slider4,
+        .slider5{
+            display: none;
+        }
     }
+    
 }
 
 
@@ -316,34 +323,34 @@ section.cards {
     }
 
     div.box1 {
-        background: linear-gradient(transparent, transparent), url("/images/grid1.jpg");
+        background: linear-gradient(transparent, transparent), url("../images/grid1.jpg");
         background-size: cover;
          &:hover {
              background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                 url("/images/grid1.jpg");
+                 url("../images/grid1.jpg");
              background-size: cover;
          }
     }
 
     div.box2 {
-        background:linear-gradient(transparent, transparent), url("/images/grid2.jpg");
+        background:linear-gradient(transparent, transparent), url("../images/grid2.jpg");
         background-size: cover;
        &:hover {
            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-               url("/images/grid2.jpg");
+               url("../images/grid2.jpg");
            background-size: cover;
     }
 }
 
     div.box3 {
             background:linear-gradient(transparent, transparent),
-            url("/images/grid3.jpg");
+            url("../images/grid3.jpg");
             background-size: cover;
             background-position: center;
 
             &:hover {
                 background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                    url("/images/grid3.jpg");
+                    url("../images/grid3.jpg");
                 background-size: cover;
                 background-position: center;
             }
@@ -351,38 +358,38 @@ section.cards {
 
     div.box4 {
               background:linear-gradient(transparent, transparent),
-              url("/images/grid4.jpg");
+              url("../images/grid4.jpg");
               background-size: cover;
 
               &:hover {
                   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                      url("/images/grid4.jpg");
+                      url("../images/grid4.jpg");
                   background-size: cover;
               }
     }
 
     div.box5 {
             background:linear-gradient(transparent, transparent),
-            url("/images/grid5.jpg");
+            url("../images/grid5.jpg");
             background-size: cover;
 
             &:hover {
                 background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                    url("/images/grid5.jpg");
+                    url("../images/grid5.jpg");
                 background-size: cover;
             }
     }
 
     div.box6 {
                background:linear-gradient(transparent, transparent),
-               url("/images/grid6.jpg");
+               url("../images/grid6.jpg");
                background-size: cover;
                background-position: center;
 
 
                &:hover {
                    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                       url("/images/grid6.jpg");
+                       url("../images/grid6.jpg");
                    background-size: cover;
                    background-position: center;
 
@@ -391,13 +398,13 @@ section.cards {
 
     div.box7 {
                 background:linear-gradient(transparent, transparent),
-                url("/images/grid7.jpg");
+                url("../images/grid7.jpg");
                 background-size: cover;
                 background-position: center;
 
                 &:hover {
                     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                        url("/images/grid7.jpg");
+                        url("../images/grid7.jpg");
                     background-size: cover;
                     background-position: center;
                 }
@@ -405,12 +412,12 @@ section.cards {
 
     div.box8 {
                 background:linear-gradient(transparent, transparent),
-                url("/images/grid8.jpg");
+                url("../images/grid8.jpg");
                 background-size: cover;
 
                 &:hover {
                     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                        url("/images/grid8.jpg");
+                        url("../images/grid8.jpg");
                     background-size: cover;
                 }
     }
